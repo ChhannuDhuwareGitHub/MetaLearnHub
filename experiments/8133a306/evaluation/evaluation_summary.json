@@ -1,0 +1,106 @@
+{
+  "experiment_id": "8133a306",
+  "timestamp": "2026-10-09T03:22:21.372510",
+  "held_out_class": "Red Dane cattle",
+  "meta_train_classes": [
+    "Ayrshire cattle",
+    "Brown Swiss cattle",
+    "Holstein Friesian cattle",
+    "Jersey cattle"
+  ],
+  "algorithm": "prototypical_networks",
+  "backbone": "resnet18",
+  "random_seed": 42,
+  "shot_results": {
+    "1": {
+      "k_shot": 1,
+      "n_way": 2,
+      "num_episodes": 10,
+      "held_out_class": "Red Dane cattle",
+      "class_names": [
+        "Red Dane cattle",
+        "Ayrshire cattle"
+      ],
+      "mean_accuracy": 0.575,
+      "std_accuracy": 0.1601,
+      "mean_precision": 0.6238,
+      "std_precision": 0.2081,
+      "mean_recall": 0.51,
+      "std_recall": 0.2468,
+      "mean_f1": 0.5265,
+      "std_f1": 0.187,
+      "mean_adaptation_time_ms": 266.57,
+      "mean_inference_time_ms": 876.35,
+      "total_adaptation_time_s": 2.666,
+      "total_inference_time_s": 8.764,
+      "confusion_matrix": [
+        [
+          64,
+          36
+        ],
+        [
+          49,
+          51
+        ]
+      ],
+      "episode_accuracies": [
+        0.4,
+        0.8,
+        0.45,
+        0.7,
+        0.5,
+        0.55,
+        0.75,
+        0.55,
+        0.75,
+        0.3
+      ],
+      "ci_95_accuracy": 0.0992
+    },
+    "5": {
+      "k_shot": 5,
+      "n_way": 2,
+      "num_episodes": 10,
+      "held_out_class": "Red Dane cattle",
+      "class_names": [
+        "Red Dane cattle",
+        "Ayrshire cattle"
+      ],
+      "mean_accuracy": 0.66,
+      "std_accuracy": 0.1319,
+      "mean_precision": 0.6731,
+      "std_precision": 0.1253,
+      "mean_recall": 0.58,
+      "std_recall": 0.2441,
+      "mean_f1": 0.6042,
+      "std_f1": 0.203,
+      "mean_adaptation_time_ms": 566.09,
+      "mean_inference_time_ms": 856.12,
+      "total_adaptation_time_s": 5.661,
+      "total_inference_time_s": 8.561,
+      "confusion_matrix": [
+        [
+          74,
+          26
+        ],
+        [
+          42,
+          58
+        ]
+      ],
+      "episode_accuracies": [
+        0.6,
+        0.65,
+        0.5,
+        0.95,
+        0.6,
+        0.8,
+        0.5,
+        0.75,
+        0.65,
+        0.6
+      ],
+      "ci_95_accuracy": 0.0818
+    }
+  }
+}

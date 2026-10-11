@@ -1,0 +1,59 @@
+{
+  "experiment_id": "baseline_e259b0f6",
+  "timestamp": "2026-10-09T03:40:56.470022",
+  "method": "conventional_resnet18",
+  "held_out_class": "Red Dane cattle",
+  "meta_train_classes": [
+    "Ayrshire cattle",
+    "Brown Swiss cattle",
+    "Holstein Friesian cattle",
+    "Jersey cattle"
+  ],
+  "num_epochs": 10,
+  "known_class_accuracy": 0.8354,
+  "known_class_f1": 0.8326,
+  "best_val_accuracy": 0.7397,
+  "unseen_class_note": "The baseline cannot adapt to unseen classes. All unseen images are classified as one of the known training classes. This demonstrates the limitation that meta-learning addresses.",
+  "unseen_predictions_sample": [
+    {
+      "predicted_class": 3,
+      "confidence": 0.6642237305641174
+    },
+    {
+      "predicted_class": 1,
+      "confidence": 0.5871821641921997
+    },
+    {
+      "predicted_class": 3,
+      "confidence": 0.632249116897583
+    },
+    {
+      "predicted_class": 0,
+      "confidence": 0.8825179934501648
+    },
+    {
+      "predicted_class": 0,
+      "confidence": 0.8993251323699951
+    },
+    {
+      "predicted_class": 0,
+      "confidence": 0.5628235340118408
+    },
+    {
+      "predicted_class": 1,
+      "confidence": 0.9340955018997192
+    },
+    {
+      "predicted_class": 1,
+      "confidence": 0.5702997446060181
+    },
+    {
+      "predicted_class": 1,
+      "confidence": 0.9554603099822998
+    },
+    {
+      "predicted_class": 1,
+      "confidence": 0.5620452165603638
+    }
+  ]
+}

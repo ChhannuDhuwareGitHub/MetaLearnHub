@@ -1,0 +1,20 @@
+{
+  "meta_train_n_way": 4,
+  "meta_train_k_shot": 5,
+  "meta_train_query_per_class": 2,
+  "episodes_per_epoch": 20,
+  "num_epochs": 3,
+  "eval_n_way": 2,
+  "eval_query_per_class": 10,
+  "eval_episodes": 20,
+  "eval_shots": [
+    1,
+    5
+  ],
+  "random_seed": 42,
+  "image_size": 224,
+  "device": "cpu",
+  "backbone": "resnet18",
+  "pretrained": true,
+  "distance_metric": "euclidean"
+}

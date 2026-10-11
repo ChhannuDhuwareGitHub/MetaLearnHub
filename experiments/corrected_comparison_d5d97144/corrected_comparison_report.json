@@ -1,0 +1,117 @@
+{
+  "report_id": "corrected_comparison_d5d97144",
+  "generated_at": "2026-10-11T15:25:37.640329",
+  "purpose": "Corrected reproducibility comparison replacing the previous hardcoded report. All values are computed from existing artifact files, not hardcoded.",
+  "protocol_metadata": {
+    "original_experiment_id": "8133a306",
+    "audit_experiment_id": "audit_reproducibility_8133a306",
+    "original_seed": 42,
+    "audit_seed": 42,
+    "seeds_match": true,
+    "original_held_out_class": "Red Dane cattle",
+    "audit_held_out_class": "Red Dane cattle",
+    "held_out_class_match": true,
+    "original_eval_episodes": 10,
+    "audit_eval_episodes": 10,
+    "eval_episodes_match": true,
+    "original_image_size": 128,
+    "original_checkpoint_path": "C:\\projects\\project9(mega)\\metalearnhub\\checkpoints\\8133a306\\best_model.pt",
+    "original_eval_timestamp": "2026-10-09T02:34:01.819185",
+    "audit_timestamp": "2026-10-09T03:54:07.616497"
+  },
+  "tolerance_pp": 2.0,
+  "shot_comparisons": {
+    "1shot": {
+      "original_mean_accuracy": 0.575,
+      "audit_mean_accuracy": 0.665,
+      "accuracy_delta_pp": 9.0,
+      "accuracy_reproduced_within_2pp": false,
+      "original_mean_f1": 0.5265,
+      "audit_mean_f1": 0.5581,
+      "f1_delta_pp": 3.16,
+      "original_class_pairing": [
+        "Red Dane cattle",
+        "Ayrshire cattle"
+      ],
+      "audit_class_pairing": [
+        "Red Dane cattle",
+        "Jersey cattle"
+      ],
+      "class_pairing_match": false,
+      "original_episode_accuracies": [
+        0.4,
+        0.8,
+        0.45,
+        0.7,
+        0.5,
+        0.55,
+        0.75,
+        0.55,
+        0.75,
+        0.3
+      ],
+      "audit_episode_accuracies": [
+        0.55,
+        0.55,
+        0.7,
+        0.95,
+        0.65,
+        0.75,
+        0.85,
+        0.75,
+        0.4,
+        0.5
+      ],
+      "episode_sequences_match": false,
+      "protocols_directly_comparable": true,
+      "explanation": "Known-class pairing differs: original used ['Red Dane cattle', 'Ayrshire cattle'], audit used ['Red Dane cattle', 'Jersey cattle']. This means the evaluator sampled a different known class as the second way in 2-way episodes, making per-episode accuracy sequences non-comparable even with the same seed. Accuracy DIFFERS beyond \u00b12pp tolerance: original 57.50% vs audit 66.50% (delta +9.00pp). Macro-F1: original 52.65% vs audit 55.81% (delta +3.16pp). Per-episode accuracy sequences differ, confirming non-identical episode sampling."
+    },
+    "5shot": {
+      "original_mean_accuracy": 0.66,
+      "audit_mean_accuracy": 0.715,
+      "accuracy_delta_pp": 5.5,
+      "accuracy_reproduced_within_2pp": false,
+      "original_mean_f1": 0.6042,
+      "audit_mean_f1": 0.6932,
+      "f1_delta_pp": 8.9,
+      "original_class_pairing": [
+        "Red Dane cattle",
+        "Ayrshire cattle"
+      ],
+      "audit_class_pairing": [
+        "Red Dane cattle",
+        "Jersey cattle"
+      ],
+      "class_pairing_match": false,
+      "original_episode_accuracies": [
+        0.6,
+        0.65,
+        0.5,
+        0.95,
+        0.6,
+        0.8,
+        0.5,
+        0.75,
+        0.65,
+        0.6
+      ],
+      "audit_episode_accuracies": [
+        0.65,
+        0.4,
+        0.7,
+        0.95,
+        0.9,
+        0.95,
+        0.95,
+        1.0,
+        0.55,
+        0.1
+      ],
+      "episode_sequences_match": false,
+      "protocols_directly_comparable": true,
+      "explanation": "Known-class pairing differs: original used ['Red Dane cattle', 'Ayrshire cattle'], audit used ['Red Dane cattle', 'Jersey cattle']. This means the evaluator sampled a different known class as the second way in 2-way episodes, making per-episode accuracy sequences non-comparable even with the same seed. Accuracy DIFFERS beyond \u00b12pp tolerance: original 66.00% vs audit 71.50% (delta +5.50pp). Macro-F1: original 60.42% vs audit 69.32% (delta +8.90pp). Per-episode accuracy sequences differ, confirming non-identical episode sampling."
+    }
+  },
+  "previous_report_location": "C:\\projects\\project9(mega)\\metalearnhub\\experiments\\audit_reproducibility_8133a306\\comparison_diff_report.json",
+  "previous_report_issue": "The previous comparison_diff_report.json contained a hardcoded explanation claiming 'Exact match on mean accuracy (57.50%)' which was factually incorrect: the audit rerun produced 66.50% 1-shot accuracy, not 57.50%."
+}

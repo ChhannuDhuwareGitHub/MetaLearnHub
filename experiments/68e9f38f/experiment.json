@@ -1,0 +1,113 @@
+{
+  "experiment_id": "68e9f38f",
+  "timestamp": "2026-10-09T15:13:41.980440",
+  "status": "completed",
+  "config": {
+    "experiment_name": "protonet_experiment",
+    "random_seed": 42,
+    "held_out_class": "Red Dane cattle",
+    "algorithm": "prototypical_networks",
+    "preprocess": {
+      "image_size": 224,
+      "center_crop_size": 224,
+      "normalize_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalize_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "use_augmentation": true,
+      "random_horizontal_flip": true,
+      "random_rotation": 15.0,
+      "color_jitter_brightness": 0.2,
+      "color_jitter_contrast": 0.2,
+      "color_jitter_saturation": 0.2,
+      "color_jitter_hue": 0.1
+    },
+    "episode": {
+      "n_way": 3,
+      "k_shot": 5,
+      "query_per_class": 5,
+      "episodes_per_epoch": 100,
+      "num_epochs": 3
+    },
+    "model": {
+      "backbone": "resnet18",
+      "pretrained": true,
+      "embedding_dim": 512,
+      "distance_metric": "euclidean",
+      "freeze_backbone": false
+    },
+    "training": {
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "lr_scheduler": "step",
+      "lr_step_size": 20,
+      "lr_gamma": 0.5,
+      "optimizer": "adam",
+      "device": "auto",
+      "num_workers": 4,
+      "pin_memory": true
+    },
+    "eval_shots": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "eval_episodes": 50
+  },
+  "held_out_class": "Red Dane cattle",
+  "meta_train_classes": [
+    "Ayrshire cattle",
+    "Brown Swiss cattle",
+    "Holstein Friesian cattle",
+    "Jersey cattle"
+  ],
+  "algorithm": "prototypical_networks",
+  "backbone": "resnet18",
+  "pretrained": true,
+  "n_way": 3,
+  "k_shot": 5,
+  "query_per_class": 5,
+  "episodes_per_epoch": 100,
+  "num_epochs": 3,
+  "learning_rate": 0.001,
+  "random_seed": 42,
+  "device": "cpu",
+  "training_duration_seconds": 1615.12,
+  "best_val_accuracy": 0.6933333471417427,
+  "final_train_loss": 0.7903388732671738,
+  "final_train_accuracy": 0.6326666824519634,
+  "epoch_losses": [
+    11.834317829608917,
+    0.9898938941955566,
+    0.7903388732671738
+  ],
+  "epoch_accuracies": [
+    0.4273333457112312,
+    0.5080000162124634,
+    0.6326666824519634
+  ],
+  "val_losses": [
+    1.0888120442628861,
+    0.8820337131619453,
+    0.8699425652623176
+  ],
+  "val_accuracies": [
+    0.5200000166893005,
+    0.6500000193715095,
+    0.6933333471417427
+  ],
+  "checkpoint_path": "C:\\projects\\project9(mega)\\metalearnhub\\checkpoints\\68e9f38f\\best_model.pt",
+  "split_info": {
+    "train_images": 700,
+    "val_images": 146,
+    "test_images": 158,
+    "unseen_images": 204
+  }
+}

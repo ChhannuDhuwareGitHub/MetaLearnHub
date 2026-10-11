@@ -1,0 +1,45 @@
+{
+  "k_shot": 5,
+  "n_way": 2,
+  "num_episodes": 10,
+  "held_out_class": "Red Dane cattle",
+  "class_names": [
+    "Red Dane cattle",
+    "Ayrshire cattle"
+  ],
+  "mean_accuracy": 0.66,
+  "std_accuracy": 0.1319,
+  "mean_precision": 0.6731,
+  "std_precision": 0.1253,
+  "mean_recall": 0.58,
+  "std_recall": 0.2441,
+  "mean_f1": 0.6042,
+  "std_f1": 0.203,
+  "mean_adaptation_time_ms": 566.09,
+  "mean_inference_time_ms": 856.12,
+  "total_adaptation_time_s": 5.661,
+  "total_inference_time_s": 8.561,
+  "confusion_matrix": [
+    [
+      74,
+      26
+    ],
+    [
+      42,
+      58
+    ]
+  ],
+  "episode_accuracies": [
+    0.6,
+    0.65,
+    0.5,
+    0.95,
+    0.6,
+    0.8,
+    0.5,
+    0.75,
+    0.65,
+    0.6
+  ],
+  "ci_95_accuracy": 0.0818
+}

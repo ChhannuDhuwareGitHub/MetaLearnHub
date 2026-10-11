@@ -1,0 +1,57 @@
+{
+  "experiment_name": "loco_fold_1",
+  "random_seed": 42,
+  "held_out_class": "Ayrshire cattle",
+  "algorithm": "prototypical_networks",
+  "preprocess": {
+    "image_size": 128,
+    "center_crop_size": 128,
+    "normalize_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalize_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "use_augmentation": true,
+    "random_horizontal_flip": true,
+    "random_rotation": 15.0,
+    "color_jitter_brightness": 0.2,
+    "color_jitter_contrast": 0.2,
+    "color_jitter_saturation": 0.2,
+    "color_jitter_hue": 0.1
+  },
+  "episode": {
+    "n_way": 4,
+    "k_shot": 5,
+    "query_per_class": 2,
+    "episodes_per_epoch": 25,
+    "num_epochs": 2
+  },
+  "model": {
+    "backbone": "resnet18",
+    "pretrained": true,
+    "embedding_dim": 512,
+    "distance_metric": "euclidean",
+    "freeze_backbone": false
+  },
+  "training": {
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "lr_scheduler": "step",
+    "lr_step_size": 20,
+    "lr_gamma": 0.5,
+    "optimizer": "adam",
+    "device": "cpu",
+    "num_workers": 0,
+    "pin_memory": true
+  },
+  "eval_shots": [
+    1,
+    5
+  ],
+  "eval_episodes": 10
+}

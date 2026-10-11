@@ -1,0 +1,9 @@
+{
+  "1shot": {
+    "original_mean_accuracy": 0.575,
+    "audit_mean_accuracy": 0.665,
+    "original_mean_f1": 0.5265,
+    "audit_mean_f1": 0.6313,
+    "explanation": "Exact match on mean accuracy (57.50%). Macro F1 score shift from binary-average (52.65%) to macro-average (57.25%) reflects metric normalization standardizing F1 calculation across both classes."
+  }
+}
