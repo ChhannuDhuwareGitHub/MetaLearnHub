@@ -1,5 +1,6 @@
 # MetaLearnHub
 
+
 MetaLearnHub is a few-shot image classification system based on meta-learning.
 
 ## 1. Project Objective
@@ -57,3 +58,6 @@ Go to the **Few-Shot Predict** tab.
 2. Upload a few support images.
 3. Build the prototype.
 4. Upload a query image to classify it against your new temporary classes!
+
+MetaLearnHub is an AI-powered research platform that uses few-shot learning and meta-learning to identify unseen animal species from just a few labeled images, featuring explainable AI, similarity search, and performance analytics for efficient and reliable classification.
+
